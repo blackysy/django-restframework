@@ -11,8 +11,8 @@ from .views import *
 
 
 urlpatterns = [
-    url(r'^snippets/$', snippet_list),
-    url(r'^snippets/(?P<pk>[0-9]+)/$', snippet_detail)
+    url(r'^snippets/$', SnippetList.as_view()),
+    url(r'^snippets/(?P<pk>[0-9]+)/$', SnippetDetail.as_view())
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
